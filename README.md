@@ -1,29 +1,20 @@
-# Dojo::1
+=======
+dojo-1
+======
 
-TODO: Write a gem description
+Primeiro dojo da Dasdad (22/fev/2013).
 
-## Installation
+Problema: Seqüência de Cinco
+[[http://dojopuzzles.com/problemas/exibe/sequencia-de-cinco/]]
 
-Add this line to your application's Gemfile:
+Participantes:
+Rafael Almeida
+Leonardo Baptista
+Vitor Navarro 
+Aline Miyazaki
+Leandro Facchinetti
+Cristiane Bochi
+Leandro Repolho
+Felipe Almeida
+Allan Vital
 
-    gem 'dojo-1'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install dojo-1
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
