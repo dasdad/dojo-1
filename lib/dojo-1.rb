@@ -1,52 +1,50 @@
+def teste
+	true
+end
+
+def tabuleiro
+	[[2,1,1,1,1],[2,1,1,1,1],[2,1,1,1,1],[2,1,1,1,1],[2,1,1,1,1]]
+end
+
 def multiplica_coluna(tab, index)
-	identifica_maior_multiplicador_com_cinco_numeros( tab.map{|a| a[index] } )
+	mult = 1
+	tab.each do |linha|
+		mult *= linha[index]
+	end
+	mult
 end
 
 def multiplica_linha(tab, index)
-	identifica_maior_multiplicador_com_cinco_numeros( tab[index] )
+	mult = 1
+	tab[index].each do |elemento|
+		mult *= elemento
+	end
+	mult
 end
 
-def multiplica_diagonal(tab)
-	
-	posicoes_para_diagonais = (0..(tab.size-5)).to_a
-	possibilidades = []
-	posicoes_para_diagonais.each do |inicio_x|
-		possibilidade = []
-		posicoes_para_diagonais.each do |inicio_y|
-			
-			i_x =inicio_x
-			i_y =inicio_y
-			while(i_x <= tab.size-1 && i_y <= tab.size-1)
-				possibilidade << tab[i_x][i_y]
-				i_x +=1
-				i_y +=1
-			end
+def multiplica_diagonal(tab, i, j)
+	mult = 1
+	while i < tab.size && j < tab[0].size
+		mult *= tab[i][j]
+		i+=1
+		j+=1
+	end 
 
-		end
-		possibilidades <<possibilidade
-		
-	end
-	possibilidades.map{ |p| identifica_maior_multiplicador_com_cinco_numeros( p ) }.max
+	return mult
 end
 
 def maior_produto( tabuleiro )
-	return 0 if tabuleiro.size < 5 || (tabuleiro.first||[]).size < 5
-	return 0 unless tabuleiro.size == tabuleiro.first.size
-
-	maior = [
-		(0..tabuleiro.size-1).to_a.map{|a| multiplica_coluna( tabuleiro, a ) }.max,
-		(0..tabuleiro.size-1).to_a.map{|a| produto = multiplica_linha( tabuleiro, a ) }.max,
-		multiplica_diagonal(tabuleiro),
-		multiplica_diagonal(tabuleiro.map(&:reverse))
-	].max
-
-	maior
-end
-
-def identifica_maior_multiplicador_com_cinco_numeros( array )
-	possibilidades = (0..array.size).to_a.select{|inicio| inicio+5 <= array.size}.map do | inicio |
-		array[inicio..(inicio+4)].inject(1) {|product, n| product * n }
+	maior = 0
+	tabuleiro.each_with_index do | linha, index |
+		produto = multiplica_coluna( tabuleiro, index )
+		maior = produto if produto > maior
 	end
-
-	possibilidades.max
+	tabuleiro.each_with_index do | linha, index |
+		produto = multiplica_linha( tabuleiro, index )
+		maior = produto if produto > maior
+	end
+	diagonal = multiplica_diagonal(tabuleiro,0,0)
+	
+	maior = diagonal if diagonal > maior
+	maior
 end
