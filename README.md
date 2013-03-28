@@ -1,13 +1,17 @@
-=======
 dojo-1
 ======
 
-Primeiro dojo da Dasdad (22/fev/2013).
+Data
+----
 
-**Participantes:**
+22/02/2013
+
+Participantes
+-------------
+
 * Rafael Almeida
 * Leonardo Baptista
-* Vitor Navarro 
+* Vitor Navarro
 * Aline Miyazaki
 * Leandro Facchinetti
 * Cristiane Bochi
@@ -15,23 +19,48 @@ Primeiro dojo da Dasdad (22/fev/2013).
 * Felipe Almeida
 * Allan Vital
 
+Linguagem
+---------
 
-=======
-Problema - [Seqüência de Cinco](http://dojopuzzles.com/problemas/exibe/sequencia-de-cinco/)
-======
+[Ruby](http://www.ruby-lang.org/)
 
+Problema
+--------
 
+### [Seqüência de Cinco](http://dojopuzzles.com/problemas/exibe/sequencia-de-cinco/)
 
 Dado uma matriz de números inteiros positivos de dimensões n x n, onde n >= 5, encontre o maior produto de uma seqüência de 5 números consecutivos (a seqüência pode estar na vertical, na horizontal ou na diagonal).
 
 Por exemplo, a matriz abaixo retorna 32:
 
-2 1 1 1 1
+    2 1 1 1 1
+    1 2 1 1 1
+    1 1 2 1 1
+    1 1 1 2 1
+    1 1 1 1 2
 
-1 2 1 1 1
+Retrospectiva
+-------------
 
-1 1 2 1 1
+### A melhorar
 
-1 1 1 2 1
+* Pouco tempo.
+* Co-piloto e piloto não veem a platéia. :heavy_plus_sign::heavy_plus_sign::heavy_plus_sign:
+* Muita conversa. :heavy_plus_sign::heavy_plus_sign::heavy_plus_sign:
+* Linguagem (por Allan e Rafa).
+* Mac (teclado).
+* Não discutiu o problema antes. :heavy_plus_sign:
+* Problema de linguagem (array).
+* Faltou cerveja.
 
-1 1 1 1 2
+### Positivo
+
+* Repeito da ideia.
+* Iniciativa. :heavy_plus_sign::heavy_plus_sign::heavy_plus_sign::heavy_plus_sign:
+* Problema. :heavy_plus_sign::heavy_plus_sign:
+* Seguiu a ideia de Dojo.
+* Ambiente montado. :heavy_plus_sign:
+* Linguagem. :heavy_plus_sign:
+* Explicação do ambiente.
+* Galera.
+* Não discutiu o problema.
